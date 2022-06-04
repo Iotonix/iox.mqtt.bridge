@@ -23,6 +23,7 @@ class MqttUtil:
         self.plugin_module = importlib.import_module(plugin_name, ".")
 
     def init_north(self):
+        print("Initializing North: (Outbound)", _c.MQTT_NORTH_SERVER)
         self.north = paho_mqtt.Client()
         if len(_c.MQTT_NORTH_USER) > 0:
             print(
@@ -52,6 +53,7 @@ class MqttUtil:
         print("started MQTT NORTH bound route")
 
     def init_south(self):
+        print("Initializing South: (Inbound)", _c.MQTT_SOUTH_SERVER)
         self.south = paho_mqtt.Client()
         self.south.on_message = self.on_message_in
         self.south.on_connect = self.on_connect_south

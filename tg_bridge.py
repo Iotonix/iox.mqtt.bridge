@@ -14,6 +14,9 @@ class Bridge:
 
     def run(self):
         print("Let's run here", self.version)
+        print("NORTH USER: ", _c.MQTT_SOUTH_USER, ".")
+        print("SOUTH USER: ", _c.MQTT_NORTH_USER, ".")
+
         for plugin in _c.PlUGINS:
             print(plugin["topic"], plugin["plugin"])
             self.clients.append(

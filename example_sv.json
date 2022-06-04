@@ -1,0 +1,16 @@
+{
+  "name": "AIT_ACER_03",
+  "clazz": "SensorValue",
+  "sensorId": 803,
+  "measuredAt": "1607595958",
+  "value": 0,
+  "unit": "None",
+  "valueUnit": "None",
+  "sensorValueEntries": [
+    { "propName": "Raw", "propValue": "[352, 324, 24, 36, 41,]" },
+    {
+      "propName": "Fields",
+      "propValue": "[Temperature, Humidty, _PM1, Pm25, PM10,]"
+    }
+  ]
+}

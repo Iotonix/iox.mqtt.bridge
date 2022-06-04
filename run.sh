@@ -1,0 +1,19 @@
+#!/bin/bash
+export MQTT_NORTH_SERVER=10.0.249.245
+export MQTT_NORTH_PORT=1883
+export MQTT_NORTH_USER=
+export MQTT_NORTH_PASSWORD=
+export MQTT_SOUTH_SERVER=203.155.13.173
+export MQTT_SOUTH_PORT=28186
+export MQTT_SOUTH_USER=writer
+export MQTT_SOUTH_PASSWORD=CamelsDrinkLotsOfGin!123
+
+
+export MONGO_CONTAINER=203.155.13.173
+export APPLICATION_MONGO_USER=tgadmin
+export APPLICATION_MONGO_PW=StultusBUCINUM
+export APPLICATION_MONGO_HOST=$MONGO_CONTAINER
+export APPLICATION_MONGO_PORT=28105
+export APPLICATION_MONGO_DB=talegur
+
+ ./node_modules/nodemon/bin/nodemon.js --exec python3 mqtt_bridge.py

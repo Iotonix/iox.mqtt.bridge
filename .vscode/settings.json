@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "/home/ralf/.virtualenvs/mqttbridge/bin/python",
+    "python.formatting.provider": "black",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintPath": "pylint",
+    "editor.formatOnSave": true,
+    "editor.minimap.maxColumn": 80,
+    "html.format.wrapLineLength": 79,
+    "editor.rulers": [
+        80
+    ],
+    "python.formatting.blackArgs": [
+        "--line-length=80"
+    ]
+}

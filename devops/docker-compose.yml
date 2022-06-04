@@ -1,0 +1,49 @@
+version: '3.5'
+services:
+  tg-mqtt-mongo:
+      image: mongo:latest
+      container_name: "tg-mqtt-mongo"
+      networks:
+        - talegur
+      environment:
+        - MONGO_DATA_DIR=/data/db
+        - MONGO_LOG_DIR=/dev/null
+        - MONGO_INITDB_ROOT_USERNAME=tgadmin
+        - MONGO_INITDB_ROOT_PASSWORD=StultusBUCINUM
+        - MONGO_INITDB_DATABASE=talegur
+      volumes:
+        - /etc/localtime:/etc/localtime:ro
+        - /etc/timezone:/etc/timezone:ro
+        - tgMongoVolumeTest:/data/db
+      ports:
+        - 28105:27017
+      command:  mongod  --logpath=/dev/null --auth  --bind_ip_all
+
+  # Set mosquitto password 
+  # cd ./devops
+  # mosquitto_passwd -c ./mosquitto/mosquitto.passwd admin 
+  # mosquitto:
+  #   image: eclipse-mosquitto
+  #   hostname: mosquitto
+  #   container_name: mosquitto
+  #   expose:
+  #     - "1883"
+  #     - "9001"
+  #   ports:
+  #     - "28186:1883"
+  #     - "9001:9001"
+  #   volumes:
+  #     - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+  #     - ./mosquitto/mosquitto.passwd:/mosquitto/config/mosquitto.passwd
+  #     - ./mosquitto/log/mosquitto.log:/mosquitto/log/mosquitto.log
+  #     - ./mosquitto/data:/mosquitto/data      
+  #   networks:
+  #     - talegur
+
+volumes:
+  tgMongoVolumeTest:
+  
+networks:
+  talegur:
+    external: false
+    

@@ -1,0 +1,18 @@
+{
+  "name": "talegur.mqtt.bridge",
+  "version": "1.0.0",
+  "description": "This repo holds the talegur mqttbridge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.ait.co.th/ralf.h/talegur.mqtt.bridge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
